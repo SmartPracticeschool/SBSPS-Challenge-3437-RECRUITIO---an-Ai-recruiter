@@ -16,6 +16,5 @@ Application ID: SPS_CH_APL_20200006684
 Project ID: SPS_PRO_844 
 
 
-DEMO VIDEO LINK: 
+DEMO VIDEO LINK:  https://youtu.be/Wr3HusfJnNQ
 
-APP LINK: 
