@@ -1,0 +1,2254 @@
+{
+  "intents": [
+    {
+      "intent": "Cancel",
+      "examples": [
+        {
+          "text": "Forget it!"
+        },
+        {
+          "text": "Cancel my application"
+        },
+        {
+          "text": "I am sorry, but i don't want this job"
+        },
+        {
+          "text": "I am not interested in working with you"
+        },
+        {
+          "text": "I do not want to intern"
+        }
+      ],
+      "description": "for those applicants that don't want job/intern"
+    },
+    {
+      "intent": "interested",
+      "examples": [
+        {
+          "text": "looking for jobs"
+        },
+        {
+          "text": "and for a part time basis"
+        },
+        {
+          "text": "what are the job openings"
+        },
+        {
+          "text": "open for job opportunities?"
+        },
+        {
+          "text": "do you give placements?"
+        },
+        {
+          "text": "looking for an internship"
+        },
+        {
+          "text": "are there any vacancies"
+        },
+        {
+          "text": "i want an internship"
+        },
+        {
+          "text": "i'm ready to work"
+        },
+        {
+          "text": "internship opportunites"
+        }
+      ],
+      "description": "for those who show interest"
+    },
+    {
+      "intent": "Greeting",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "hey there"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "yo"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "Good morning"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thanking",
+      "examples": [
+        {
+          "text": "Ok good"
+        },
+        {
+          "text": "Thanks alot"
+        },
+        {
+          "text": "GG"
+        },
+        {
+          "text": "Appreciate it!"
+        },
+        {
+          "text": "Yes, that's good"
+        },
+        {
+          "text": "Thank you very much"
+        },
+        {
+          "text": "That's nice"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "projectandachieve",
+      "examples": [
+        {
+          "text": "i did a project on"
+        },
+        {
+          "text": "competition"
+        },
+        {
+          "text": "I participated in"
+        },
+        {
+          "text": "I achieved"
+        },
+        {
+          "text": "I won prize in"
+        },
+        {
+          "text": "i created a"
+        },
+        {
+          "text": "i made a flower shop website"
+        },
+        {
+          "text": "I made a project on"
+        },
+        {
+          "text": "i built an algorithm"
+        },
+        {
+          "text": "i made a website using CSS and django"
+        },
+        {
+          "text": "make"
+        },
+        {
+          "text": "project"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "goodbye",
+      "examples": [
+        {
+          "text": "later"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "buh bye"
+        },
+        {
+          "text": "goodbye"
+        },
+        {
+          "text": "ciao"
+        },
+        {
+          "text": "see ya"
+        },
+        {
+          "text": "ttyl"
+        },
+        {
+          "text": "have a nice day"
+        },
+        {
+          "text": "gotta go"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "opportunities",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "placements",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "vacancy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "available posts",
+          "synonyms": [
+            "posting"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "opportunities",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "looking to hire",
+          "synonyms": [
+            "hire"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "languages-known",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "French",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hindi",
+          "synonyms": [
+            "Indian "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Marathi",
+          "synonyms": [
+            "Maharashtrian"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Japanese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "English",
+          "synonyms": [
+            "Eng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Spanish",
+          "synonyms": [
+            "Esapnol"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "frameworks",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Meteor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ruby on Rails",
+          "synonyms": [
+            "Ruby"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Laravel",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bootstrap",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "React js",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Angular js",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "jQuery",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Flask",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Django",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "CSS",
+          "synonyms": [
+            "Cascading Style Sheet"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Spring",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Express",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "type",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "full-time",
+          "synonyms": [
+            "full time"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "work from home",
+          "synonyms": [
+            "work-from-home",
+            "work_from_home"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "over time",
+          "synonyms": [
+            "overtime"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "part-time",
+          "synonyms": [
+            "part time"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "location",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Chennai",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mumbai",
+          "synonyms": [
+            "Bombay"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pune",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ahmedabad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bangalore",
+          "synonyms": [
+            "Bengaluru"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Delhi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hyderabad",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "interpersonal-skills",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "decision making",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "time management",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "teamwork",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "communication skills",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "hardwork",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "problem solving",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "leadership",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "jobintern",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "job",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "internship",
+          "synonyms": [
+            "intern"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "num",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": [
+            "two"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": [
+            "three"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "5",
+          "synonyms": [
+            "five"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": [
+            "one"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": [
+            "four"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1593695747777",
+      "variable": "$basicrate",
+      "dialog_node": "slot_6_1593703579486",
+      "previous_sibling": "handler_1_1594235574924"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Damn those skills, You must be a Pro in these languages. How about data pre-processing stuff like numpy/pandas?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593695747777",
+      "conditions": "$basicrate == 5",
+      "dialog_node": "response_1_1593702580546",
+      "previous_sibling": "response_1_1593702468976"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's good, How about data preprocessing stuff like numpy/pandas?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593695747777",
+      "context": {},
+      "conditions": "$basicrate > 2 && $basicrate <5",
+      "dialog_node": "response_1_1593702468976",
+      "previous_sibling": "response_9_1593702387215"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, How can you expect a job with that skill level."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1593695747777",
+      "conditions": "@sys-number == 0",
+      "event_name": "generic",
+      "dialog_node": "handler_1_1594235574924",
+      "previous_sibling": "handler_10_1593710242016"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Not bad $name, you can always improve, anyways how about data preprocessing stuff like numpy/pandas?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593695747777",
+      "context": {},
+      "conditions": "$basicrate < 3",
+      "dialog_node": "response_9_1593702387215",
+      "previous_sibling": "slot_6_1593703579486"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1593695747777",
+      "next_step": {
+        "behavior": "skip_slot"
+      },
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_10_1593710242016"
+    },
+    {
+      "type": "frame",
+      "title": "rate_preprocess",
+      "parent": "node_3_1593688329246",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1593700511615"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_10_1593696171016",
+      "previous_sibling": "node_7_1593695747777"
+    },
+    {
+      "type": "frame",
+      "title": "rate_Time Management",
+      "output": {
+        "generic": [
+          {
+            "title": "That's Good!, How good are you when it comes to Decision Making? Please rate 1-5",
+            "source": "https://unbridlingyourbrilliance.com/wp-content/uploads/2019/11/Make-great-leadership-decisions.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_3_1593688329246",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1593715936744"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_10_1593715801170",
+      "previous_sibling": "node_1_1593715380539"
+    },
+    {
+      "type": "frame",
+      "title": "rate_Leadership",
+      "output": {
+        "generic": [
+          {
+            "title": "Cool. How would you rate your Teamwork dexterity?",
+            "source": "https://blog.vantagecircle.com/content/images/2019/05/teamwork-and-team-building.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_3_1593688329246",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1593715380539"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_5_1593715032251",
+      "previous_sibling": "node_9_1593713593064"
+    },
+    {
+      "type": "frame",
+      "title": "rate_Decision Making",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright! $name, one last question. How many languages do you speak?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1593688329246",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_8_1593802722690"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_4_1593715936744",
+      "previous_sibling": "node_10_1593715801170"
+    },
+    {
+      "type": "frame",
+      "title": "rate_Cloud",
+      "parent": "node_3_1593688329246",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_9_1593713593064"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_10_1593700869106",
+      "previous_sibling": "node_6_1593700511615"
+    },
+    {
+      "type": "frame",
+      "title": "rate_models/optimization",
+      "parent": "node_3_1593688329246",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1593700869106"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_6_1593700511615",
+      "previous_sibling": "node_10_1593696171016"
+    },
+    {
+      "type": "standard",
+      "title": "Interpersonal starts here",
+      "parent": "node_3_1593688329246",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1593715032251"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_9_1593713593064",
+      "previous_sibling": "node_10_1593700869106"
+    },
+    {
+      "type": "frame",
+      "title": "rate_Teamwork",
+      "output": {
+        "generic": [
+          {
+            "title": "That's good!, How about Time Management",
+            "source": "https://cdn.labmanager.com/assets/articleNo/5659/aImg/38953/time-management-101-l.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_3_1593688329246",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1593715801170"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_1_1593715380539",
+      "previous_sibling": "node_5_1593715032251"
+    },
+    {
+      "type": "frame",
+      "title": "rate_languages (py/r/tf/caffe)",
+      "parent": "node_3_1593688329246",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1593696171016"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_7_1593695747777"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please rate as mentioned. Rate your pre-processing skills level."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1593710672063",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1593710672115",
+      "previous_sibling": "handler_1_1593710672115"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1593710672063",
+      "context": {
+        "framerate": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_1_1593710672115"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Decision making is an integral soft skill."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1593715936744",
+      "conditions": "@sys-number < 1",
+      "event_name": "generic",
+      "dialog_node": "handler_5_1594236991373",
+      "previous_sibling": "handler_2_1593715973032"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1593715936744",
+      "variable": "$decision",
+      "dialog_node": "slot_7_1593715966940",
+      "previous_sibling": "handler_5_1594236991373"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1593715936744",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_2_1593715973032"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "That's sad, you must have this soft skill."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1593715380539",
+      "conditions": "@sys-number < 1",
+      "event_name": "generic",
+      "dialog_node": "handler_10_1594236798268",
+      "previous_sibling": "handler_7_1593715727007"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1593715380539",
+      "variable": "$teamps",
+      "dialog_node": "slot_3_1593715408996",
+      "previous_sibling": "handler_10_1594236798268"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1593715380539",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_7_1593715727007"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You looking for a Job or an Internship?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1592764688706",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1592764688723",
+      "previous_sibling": "handler_6_1592764688723"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1592764688706",
+      "context": {
+        "jobintern": "@jobintern"
+      },
+      "conditions": "@jobintern",
+      "event_name": "input",
+      "dialog_node": "handler_6_1592764688723"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cool, So $name, I reckon you want a Job on a $type basis. I shall remember that! Can you share some projects that you might have done or made?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593600324047",
+      "conditions": "$type == \"work from home\" && $jobintern == \"job\"",
+      "dialog_node": "response_5_1594148835040",
+      "previous_sibling": "response_6_1594055814339"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cool, So $name, I reckon you want an Internship on a $type basis in $city City. I shall remember that! Can you share some projects that you might have done or made?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593600324047",
+      "conditions": "$city && $jobintern == \"internship\"",
+      "dialog_node": "response_9_1594055786706",
+      "previous_sibling": "response_5_1594148835040"
+    },
+    {
+      "type": "standard",
+      "title": "Proceed only if talks about project",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's great, On a scale of 1 to 5 how would you rate your skills. These ratings will be recorded for further evaluation purposes. \n\nStarting with Python/R (tensorflow/pytorch will be a plus)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593600324047",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_7_1593695747777"
+      },
+      "conditions": "#projectandachieve || @frameworks",
+      "dialog_node": "node_3_1593688329246",
+      "previous_sibling": "response_10_1594148525936"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cool, So $name, I reckon you want a Job on a $type basis in $city City. I shall remember that! Can you share some projects that you might have done or made?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593600324047",
+      "conditions": "$city && $jobintern == \"job\"",
+      "dialog_node": "response_10_1594148525936",
+      "previous_sibling": "response_9_1594055786706"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cool, So $name, I reckon you want an Internship on a $type basis. I shall remember that! Can you share some projects that you might have done or made?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593600324047",
+      "conditions": "$type == \"work from home\" && $jobintern == \"internship\"",
+      "dialog_node": "response_6_1594055814339"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Will this be Part-time, Full-time, Work from home or overtime"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1593604773601",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1593604773606",
+      "previous_sibling": "handler_7_1593604773606"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1593604773601",
+      "context": {
+        "type": "@type"
+      },
+      "conditions": "@type",
+      "event_name": "input",
+      "dialog_node": "handler_7_1593604773606"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, Please rate as mentioned. rate yourself for Decision making."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1593715966940",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1593715966953",
+      "previous_sibling": "handler_3_1593715966953"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1593715966940",
+      "context": {
+        "decision": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_3_1593715966953"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, Please rate as mentioned. Rate yourself for Time Management."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1593715851157",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1593715851175",
+      "previous_sibling": "handler_6_1593715851175"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1593715851157",
+      "context": {
+        "time": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_6_1593715851175"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, Please rate as mentioned. Rate yourself for Teamwork."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1593715408996",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1593715409009",
+      "previous_sibling": "handler_6_1593715409009"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1593715408996",
+      "context": {
+        "teamps": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_6_1593715409009"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes, We are interested to hire new candidates."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592735745864",
+      "conditions": "@opportunities:(looking to hire)",
+      "dialog_node": "response_2_1593343853265",
+      "previous_sibling": "response_10_1593343816112"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "There sure are some placement options."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592735745864",
+      "conditions": "@opportunities:placements",
+      "dialog_node": "response_7_1593343906871",
+      "previous_sibling": "response_2_1593343853265"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes, We do have a few vacancies."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592735745864",
+      "conditions": "@opportunities:vacancy",
+      "dialog_node": "response_10_1593343816112"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Damn those skills, You must be a Pro in Cloud, Anyways $name, your ratings have been recorded. Also $name, I would like to know how well can you handle leadership and/or interacting with your fellow Juniors. Rate your adroitness on a scale of 1-5.",
+            "source": "https://doersnetwork.com/wp-content/uploads/2019/11/leadership-904624430_383559.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1593713593064",
+      "conditions": "$cloudrate == 5",
+      "dialog_node": "response_4_1594063475618",
+      "previous_sibling": "response_6_1594063420995"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "That's good, Anyways $name, your ratings have been recorded. Also $name, I would like to know how well can you handle leadership and/or interacting with your fellow Juniors. Rate your adroitness on a scale of 1-5.",
+            "source": "https://doersnetwork.com/wp-content/uploads/2019/11/leadership-904624430_383559.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1593713593064",
+      "conditions": "$cloudrate > 2 && $cloudrate < 5",
+      "dialog_node": "response_6_1594063420995",
+      "previous_sibling": "response_4_1594063325444"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Not bad $name, you can always improve, Anyways $name, your ratings have been recorded. Also $name, I would like to know how well can you handle leadership and/or interacting with your fellow Juniors. Rate your adroitness on a scale of 1-5.",
+            "source": "https://doersnetwork.com/wp-content/uploads/2019/11/leadership-904624430_383559.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1593713593064",
+      "context": {},
+      "conditions": "$cloudrate < 3",
+      "dialog_node": "response_4_1594063325444"
+    },
+    {
+      "type": "standard",
+      "title": "Thanking",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am glad that I could be of service and I am happy to help"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592734521483",
+      "conditions": "#thanking",
+      "dialog_node": "node_7_1593348404221",
+      "previous_sibling": "node_7_1593348019807"
+    },
+    {
+      "type": "standard",
+      "title": "Goodbye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "See you later $name."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592734521483",
+      "conditions": "#goodbye",
+      "dialog_node": "node_5_1593348590547",
+      "previous_sibling": "node_7_1593348404221"
+    },
+    {
+      "type": "standard",
+      "title": "Greeting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey there, $name."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592734521483",
+      "conditions": "#Greeting",
+      "dialog_node": "node_7_1593348019807"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's great, We have several job openings."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592736293821",
+      "conditions": "$jobintern == \"job\"",
+      "dialog_node": "response_5_1592737102853",
+      "previous_sibling": "slot_1_1592764688706"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Awesome, Internships are available with us."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592736293821",
+      "conditions": "$jobintern == \"internship\"",
+      "dialog_node": "response_10_1592737123974",
+      "previous_sibling": "response_5_1592737102853"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1592736293821",
+      "variable": "$jobintern",
+      "dialog_node": "slot_1_1592764688706"
+    },
+    {
+      "type": "standard",
+      "title": "Your resume = this bot!",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "From your resume, it seems that you are skilled in Data Science/Ai. You can ask me about job and internship opportunities with our firm."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "true",
+      "dialog_node": "node_5_1593281549962",
+      "previous_sibling": "node_10_1593281135035"
+    },
+    {
+      "type": "standard",
+      "title": "Collect Names",
+      "parent": "Welcome",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_5_1593281549962"
+      },
+      "conditions": "true",
+      "dialog_node": "node_10_1593281135035",
+      "previous_sibling": "node_10_1594147612562"
+    },
+    {
+      "type": "standard",
+      "title": "kimi no nawa",
+      "output": {
+        "generic": []
+      },
+      "parent": "Welcome",
+      "context": {
+        "name": "<? input.text.substring(0, 1).toUpperCase() + input.text.substring(1) ?>"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_10_1593281135035"
+      },
+      "conditions": "true",
+      "dialog_node": "node_10_1594147612562"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name Time is money, you've got to learn to values it."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593715801170",
+      "conditions": "@sys-number < 1",
+      "event_name": "generic",
+      "dialog_node": "handler_8_1594236896475",
+      "previous_sibling": "handler_9_1593715896009"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1593715801170",
+      "variable": "$time",
+      "dialog_node": "slot_7_1593715851157",
+      "previous_sibling": "handler_8_1594236896475"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593715801170",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_9_1593715896009"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Ok, $name. Which city will be suitable for your $type $jobintern?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1593622523922",
+      "context": {},
+      "event_name": "focus",
+      "dialog_node": "handler_10_1593622523934",
+      "previous_sibling": "handler_2_1593622523934"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1593622523922",
+      "context": {
+        "city": "@location"
+      },
+      "conditions": "@location",
+      "event_name": "input",
+      "dialog_node": "handler_2_1593622523934"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's good, How about cloud skills of IBM/AWS/Azure/GCS?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593700511615",
+      "conditions": "$dbrate  > 2 && $dbrate <5",
+      "dialog_node": "response_2_1593711927600",
+      "previous_sibling": "response_1_1593711789207"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1593700511615",
+      "variable": "$dbrate",
+      "dialog_node": "slot_3_1593711791104",
+      "previous_sibling": "handler_10_1594236192120"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Not bad $name, you can always improve, anyways how about your cloud skills of IBM/AWS/Azure/GCS?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593700511615",
+      "context": {},
+      "conditions": "$dbrate < 3",
+      "dialog_node": "response_1_1593711789207",
+      "previous_sibling": "slot_3_1593711791104"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Damn those skills, You must be a Pro, How about your cloud skills of IBM/AWS/Azure/GCS?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1593700511615",
+      "conditions": "$dbrate == 5",
+      "dialog_node": "response_2_1593711968700",
+      "previous_sibling": "response_2_1593711927600"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, How can you expect a/an $jobintern with that skill level."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1593700511615",
+      "conditions": "@sys-number == 0",
+      "event_name": "generic",
+      "dialog_node": "handler_10_1594236192120",
+      "previous_sibling": "handler_8_1593711856421"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1593700511615",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_8_1593711856421"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Not bad $name, you can always improve, anyways how about models like SVM/PCA/CNNs/RNNs and optimization methods?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593696171016",
+      "context": {},
+      "conditions": "$framerate < 3",
+      "dialog_node": "response_1_1593703115747",
+      "previous_sibling": "slot_4_1593710672063"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Damn those skills, You must be a Pro in numpy/pandas, How about models like SVM/PCA/CNNs/RNNs and optimization methods?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593696171016",
+      "conditions": "$framerate == 5",
+      "dialog_node": "response_8_1593711676098",
+      "previous_sibling": "response_10_1593711588063"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, How can you expect a/an $jobintern with that skill level."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593696171016",
+      "conditions": "@sys-number == 0",
+      "event_name": "generic",
+      "dialog_node": "handler_1_1594236085902",
+      "previous_sibling": "handler_2_1593711518152"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's good, How about models like SVM/PCA/CNNs/RNNs and optimization methods?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593696171016",
+      "conditions": "$framerate > 2 && $framerate <5",
+      "dialog_node": "response_10_1593711588063",
+      "previous_sibling": "response_1_1593703115747"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1593696171016",
+      "variable": "$framerate",
+      "dialog_node": "slot_4_1593710672063",
+      "previous_sibling": "handler_1_1594236085902"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593696171016",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_2_1593711518152"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1593622425533",
+      "variable": "$city",
+      "dialog_node": "slot_5_1593622523922",
+      "previous_sibling": "response_2_1594235132216"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's great!, also FYI $name, we do provide Cab services."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593622425533",
+      "conditions": "$city",
+      "dialog_node": "response_2_1594235132216"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, How can you expect a/an $jobintern with that skill level."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593700869106",
+      "conditions": "@sys-number ==0",
+      "event_name": "generic",
+      "dialog_node": "handler_7_1594236240519",
+      "previous_sibling": "handler_5_1593712700262"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1593700869106",
+      "variable": "$cloudrate",
+      "dialog_node": "slot_5_1593712596155",
+      "previous_sibling": "handler_7_1594236240519"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593700869106",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_5_1593712700262"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, Please rate as mentioned. Rate your models/optimization skills."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1593711791104",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1593711791125",
+      "previous_sibling": "handler_7_1593711791125"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1593711791104",
+      "context": {
+        "dbrate": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_7_1593711791125"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey there, $name, How may I assist you today?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593281135035",
+      "context": {
+        "name": "<? input.text.substring(0, 1).toUpperCase() + input.text.substring(1) ?>"
+      },
+      "conditions": "$name",
+      "dialog_node": "response_2_1594147005164",
+      "previous_sibling": "response_4_1594147087301"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593281135035",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "$name == \"Bye\"",
+      "dialog_node": "response_4_1594147087301"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please rate as mentioned."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1593703579486",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1593703579506",
+      "previous_sibling": "handler_1_1593703579506"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1593703579486",
+      "context": {
+        "basicrate": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_1_1593703579506"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, Please rate as mentioned. Rate yourself for leadership."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1593715213049",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1593715213067",
+      "previous_sibling": "handler_10_1593715213067"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1593715213049",
+      "context": {
+        "lead": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_10_1593715213067"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1593715032251",
+      "variable": "$lead",
+      "dialog_node": "slot_7_1593715213049",
+      "previous_sibling": "handler_9_1594236615162"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "That's really Sad, you might need to work on that"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1593715032251",
+      "conditions": "@sys-number < 1",
+      "event_name": "generic",
+      "dialog_node": "handler_9_1594236615162",
+      "previous_sibling": "handler_6_1593715275034"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "You are supposed to rate on the scale of 1 to 5."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1593715032251",
+      "conditions": "@sys-number > 5",
+      "event_name": "generic",
+      "dialog_node": "handler_6_1593715275034"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1592737328985",
+      "variable": "$type",
+      "dialog_node": "slot_8_1593604773601",
+      "previous_sibling": "response_6_1593632864803"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1592737328985",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1593622425533"
+      },
+      "conditions": "$type == \"over time\"",
+      "dialog_node": "response_3_1593632817532",
+      "previous_sibling": "response_6_1593630491112"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1592737328985",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1593622425533"
+      },
+      "conditions": "$type == \"part-time\"",
+      "dialog_node": "response_6_1593630491112",
+      "previous_sibling": "response_3_1593630469550"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1592737328985",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_6_1593600324047"
+      },
+      "conditions": "$type == \"work from home\"",
+      "dialog_node": "response_6_1593632864803",
+      "previous_sibling": "response_3_1593632817532"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1592737328985",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1593622425533"
+      },
+      "conditions": "$type == \"full-time\"",
+      "dialog_node": "response_3_1593630469550"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$name, Please rate as mentioned. Rate your Cloud skills."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1593712596155",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1593712596173",
+      "previous_sibling": "handler_3_1593712596173"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1593712596155",
+      "context": {
+        "cloudrate": "@num"
+      },
+      "conditions": "@num",
+      "event_name": "input",
+      "dialog_node": "handler_3_1593712596173"
+    },
+    {
+      "type": "standard",
+      "title": "Languages you speak",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's great $name, Alright! Goodbye, Have a nice day!, Your results will show up at any moment."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "ratings": true
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@languages-known || @sys-number",
+      "dialog_node": "node_8_1593802722690",
+      "previous_sibling": "node_6_1593600324047"
+    },
+    {
+      "type": "frame",
+      "title": "Job_Internship",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_3_1592737328985"
+      },
+      "conditions": "@opportunities || @location || @jobintern",
+      "digress_in": "returns",
+      "dialog_node": "node_2_1592736293821",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_5_1592735745864",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1592734521483",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "type",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_6_1593600324047"
+      },
+      "conditions": "@jobintern || @opportunities || @type",
+      "digress_in": "returns",
+      "dialog_node": "node_3_1592737328985",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_2_1592736293821",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "folder",
+      "title": "Chit Chat",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1592734521483",
+      "previous_sibling": "node_8_1593802722690"
+    },
+    {
+      "type": "standard",
+      "title": "interested",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_2_1592736293821"
+      },
+      "conditions": "#interested",
+      "digress_in": "returns",
+      "dialog_node": "node_5_1592735745864",
+      "digress_out": "allow_all",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Acknowledge and ask Projects/Achievements & Ratings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@jobintern || @location || @type || @opportunities",
+      "digress_in": "returns",
+      "dialog_node": "node_6_1593600324047",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_7_1593622425533"
+    },
+    {
+      "type": "frame",
+      "title": "Location",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_6_1593600324047"
+      },
+      "conditions": "@jobintern || @opportunities || @type || @location",
+      "digress_in": "returns",
+      "dialog_node": "node_7_1593622425533",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_3_1592737328985",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I am Recruitio a chatbot, What can I call you by?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "ratings": false
+      },
+      "conditions": "welcome || #goodbye || #Cancel",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "full time"
+    }
+  ],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": false
+  },
+  "learning_opt_out": false,
+  "name": "Recruitio (DS/Ai)",
+  "language": "en",
+  "description": ""
+}

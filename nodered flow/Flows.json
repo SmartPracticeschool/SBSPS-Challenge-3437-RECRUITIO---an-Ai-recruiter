@@ -1,0 +1,2965 @@
+[
+    {
+        "id": "d07391d5.a8875",
+        "type": "tab",
+        "label": "Login and Registration Flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d9147b7f.cb98c8",
+        "type": "tab",
+        "label": "Pdf Parser",
+        "disabled": false,
+        "info": "# "
+    },
+    {
+        "id": "adcb4149.ab938",
+        "type": "tab",
+        "label": "UI control",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "abb8de80.1714d",
+        "type": "tab",
+        "label": "Bots",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e250a565.d632d8",
+        "type": "subflow",
+        "name": "List Files",
+        "info": "# List files\n\nWill list files in a directory.\n\nPath can be set in `msg.payload` or by setting the `DIRECTORY` environment variable.\n\nExtensions can be filtered by settings the `EXTENSIONS` environment variable to an Array of extensions.\n",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b87bc72e.2b4918"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 840,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "67a192d8.88e2ec",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "DIRECTORY",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "EXTENSIONS",
+                "type": "json",
+                "value": "[]"
+            }
+        ]
+    },
+    {
+        "id": "abde0d28.14071",
+        "type": "ui_base",
+        "z": "",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#000000",
+                "baseFont": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#000000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#262626",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Lucida Sans Unicode,Lucida Grande,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Recruitio",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 100,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "813fb1c5.a3a72",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "16bb9418.fb23dc",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "da8c1f26.462c2",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "147fd9b1.7be966",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "afa888c3.06a9c8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e20fecb3.cfb01",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "1bb350ad.0c710f",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "69a5e920.c8add8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "e0716124.ef521",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "f425d0e.1de153",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "a5f49c95.e9b9a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "3ac63b21.a69954",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "1f32df00.e13b61",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "65ed4280.cd7b6c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "45727680.163a98",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "8a58c649.23c2f8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d07a053a.172dc8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "9e15c57f.a7d3b8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "fc7d6d64.2896f",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "43068e43.99281",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "d271d2da.426ad",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "cd6612b8.54a74",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 7,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "f7c1d3d1.b4764",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "a4117d3d.c930f",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "3eff9edb.1f3442",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "a54f427f.9e8a8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "1d35990d.ecdb17",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "bca2e8f2.ae8098",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 5,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "3d5863ef.007adc",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b22d9519.0f7b18",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "dcadb188.0797b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7b8a84d.3c9147c",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Recrutio",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "45aa773e.385c78",
+        "type": "ui_group",
+        "z": "",
+        "name": "DS",
+        "tab": "7b8a84d.3c9147c",
+        "order": 5,
+        "disp": false,
+        "width": 5,
+        "collapse": false
+    },
+    {
+        "id": "e1a6cd47.86bf8",
+        "type": "ui_group",
+        "z": "",
+        "name": "WB",
+        "tab": "7b8a84d.3c9147c",
+        "order": 6,
+        "disp": false,
+        "width": 10,
+        "collapse": false
+    },
+    {
+        "id": "fae750bd.dc8aa",
+        "type": "ui_group",
+        "z": "",
+        "name": "GD",
+        "tab": "7b8a84d.3c9147c",
+        "order": 7,
+        "disp": false,
+        "width": 10,
+        "collapse": false
+    },
+    {
+        "id": "50e82898.0289b8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Registration",
+        "tab": "7b8a84d.3c9147c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9fdc266c.063a78",
+        "type": "ui_group",
+        "z": "",
+        "name": "File upload",
+        "tab": "7b8a84d.3c9147c",
+        "order": 4,
+        "disp": true,
+        "width": 10,
+        "collapse": false
+    },
+    {
+        "id": "ff450e60.e3893",
+        "type": "ui_group",
+        "z": "",
+        "name": "Login",
+        "tab": "7b8a84d.3c9147c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d8a282c1.d7689",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "5be39680.6bb928",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "257ee70b.72bca8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "2ff02772.164d98",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "639b91fd.293f5",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "80024bc1.b6a528",
+        "type": "ui_group",
+        "z": "",
+        "name": "Home page",
+        "tab": "7b8a84d.3c9147c",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "d3200f58.fbcae",
+        "type": "ui_group",
+        "z": "",
+        "name": "BC",
+        "tab": "7b8a84d.3c9147c",
+        "order": 8,
+        "disp": true,
+        "width": 10,
+        "collapse": false
+    },
+    {
+        "id": "e21e77c4.101418",
+        "type": "ui_group",
+        "z": "",
+        "name": "Final",
+        "tab": "7b8a84d.3c9147c",
+        "order": 9,
+        "disp": true,
+        "width": 7,
+        "collapse": false
+    },
+    {
+        "id": "3973c980.690496",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ff450e60.e3893",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "5699a439.596a6c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "9fdc266c.063a78",
+        "order": 3,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "492ba0d4.1fdd4",
+        "type": "exec",
+        "z": "e250a565.d632d8",
+        "command": "ls",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "67a192d8.88e2ec"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "67a192d8.88e2ec",
+        "type": "change",
+        "z": "e250a565.d632d8",
+        "name": "split and filter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t    $files := [$split(payload, '\\n')[$ != \"\"]];\t    $count($env('EXTENSIONS')) = 0 ? [$files] : [$files[$split($, '.')[-1] in $env('EXTENSIONS')]];\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b87bc72e.2b4918",
+        "type": "switch",
+        "z": "e250a565.d632d8",
+        "name": "",
+        "property": "$env('DIRECTORY')",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "492ba0d4.1fdd4"
+            ],
+            [
+                "8be9eca8.dbc33"
+            ]
+        ]
+    },
+    {
+        "id": "8be9eca8.dbc33",
+        "type": "change",
+        "z": "e250a565.d632d8",
+        "name": "DIRECTORY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "DIRECTORY",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "492ba0d4.1fdd4"
+            ]
+        ]
+    },
+    {
+        "id": "c3509970.2d9f68",
+        "type": "ui_ui_control",
+        "z": "adcb4149.ab938",
+        "name": "",
+        "events": "all",
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "e656813.dcc198",
+                "65267fea.01e7b"
+            ]
+        ]
+    },
+    {
+        "id": "65267fea.01e7b",
+        "type": "function",
+        "z": "adcb4149.ab938",
+        "name": "Reset",
+        "func": "var dumdum = msg.payload;\n\nif(dumdum == 'connect' || dumdum == 'lost')\n{\nmsg.payload = {\"group\":{\"hide\":[\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_Home_page\"]}};\nreturn msg\n}\n\nreturn",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "c3509970.2d9f68"
+            ]
+        ]
+    },
+    {
+        "id": "973d2c62.fff65",
+        "type": "http in",
+        "z": "d9147b7f.cb98c8",
+        "name": "",
+        "url": "/upload",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 150,
+        "wires": [
+            [
+                "7ed9791a.05cdf8"
+            ]
+        ]
+    },
+    {
+        "id": "7ed9791a.05cdf8",
+        "type": "pdf-hummus",
+        "z": "d9147b7f.cb98c8",
+        "name": "",
+        "filename": "",
+        "split": false,
+        "mode": {
+            "value": "asBuffer"
+        },
+        "x": 275,
+        "y": 150,
+        "wires": [
+            [
+                "cafc002.d8d3d"
+            ]
+        ]
+    },
+    {
+        "id": "5b986165.9ce98",
+        "type": "http in",
+        "z": "d9147b7f.cb98c8",
+        "name": "",
+        "url": "/simple",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "9d06e0af.ed00e"
+            ]
+        ]
+    },
+    {
+        "id": "915be768.a47f58",
+        "type": "http response",
+        "z": "d9147b7f.cb98c8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 495,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9d06e0af.ed00e",
+        "type": "ui_template",
+        "z": "d9147b7f.cb98c8",
+        "group": "9fdc266c.063a78",
+        "name": "The File Upload Page",
+        "order": 2,
+        "width": 6,
+        "height": 8,
+        "format": "<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n\n    <title>Recruitio- A smart bot recruiter</title>\n\n   <!-- Bootstrap bootstrap/css/bootstrap.min.css-->\n\t  \n\t  <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" rel=\"stylesheet\">\n\t  <!--<link href=\"startup.css\" rel=\"stylesheet\"> -->\n\t  \n\t  <style type=\"text/css\">\n\t  \t@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);\n\n.frame {\n\tposition: absolute;\n\ttop: 50%;\n\tleft: 50%;\n\twidth: 400px;\n\theight: 400px;\n\tmargin-top: -200px;\n\tmargin-left: -200px;\n\tborder-radius: 2px;\n\tbox-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);\n\toverflow: hidden;\n\tbackground: linear-gradient(#b0b0c4, #252532);\n\tcolor: #333;\n\tfont-family: \"Open Sans\", Helvetica, sans-serif;\n\n}\n\n.center {\n\tposition: absolute;\n\ttop: 50%;\n\tleft: 50%;\n\ttransform: translate(-50%, -50%);\n\twidth: 300px;\n\theight: 260px;\n\tborder-radius: 3px;\n\tbox-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);\n\tbackground: #fff;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: space-evenly;\n\tflex-direction: column;\n}\n\n.title {\n\twidth: 100%;\n\theight: 50px;\n\tborder-bottom: 1px solid #999;\n\ttext-align: center;\n}\n\nh1 {\n\tfont-size: 16px;\n\tfont-weight: 300;\n\tcolor: #666;\n}\n\n.dropzone {\n\twidth: 100px;\n\theight: 80px;\n\tborder: 1px dashed #999;\n\tborder-radius: 3px;\n\ttext-align: center;\n\talign-items: center;\n}\n\n.upload-icon {\n\tmargin: 25px 2px 2px 2px;\n}\n\n.upload-input {\n\tposition: relative;\n\ttop: -62px;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\topacity: 0;\n}\n\n.btn {\n\tdisplay: block;\n\twidth: 140px;\n\theight: 40px;\n\tbackground: black;\n\tcolor: #fff;\n\tborder-radius: 3px;\n\tborder: 0;\n\tbox-shadow: 0 3px 0 0 hotpink;\n\ttransition: all 0.3s ease-in-out;\n\tfont-size: 14px;\n\tmargin-top: 25px;\n}\n\n.btn:hover {\n\tbackground: rgb(255,255,153);\n\tbox-shadow: 0 3px 0 0 cyan;\n}\n\n#myform{\n\talign-items: center;\n\tmargin-left: 150px;\n}\n\t  </style>\n  </head>\n\n  <body>\n\n  \n\t <section id=\"upload\">\n\t     <div class=\"frame\">\n\t         <div class=\"center\">\n\t             <div class=\"title\">\n\t                 <h1  style=\"font-family:Bradley Hand,cursive\">Drag and Drop your PDF file to upload</h1>\n\t             </div>\n                 \t<form action=\"/upload\" method=\"POST\" id=\"myform\" enctype=\"multipart/form-data\">\n    \t\t\t\t\t<input type=\"file\" name=\"myFile\" class=\"buttons\">\n    \t\t\t\t\t<div class=\"dropzone\">\n                     \t\t<img src=\"http://100dayscss.com/codepen/upload.svg\" name=\"myFile\" class=\"upload-icon\" />\n                    \t \t<input type=\"file\" name=\"myFile\" value = \"Yo\" class=\"upload-input\">\n\t\t         \t\t</div>\n    \t\t\t\t\t<input type=\"submit\" class=\"btn\" name=\"uploadbutton\"></>\n\t\t\t\t\t</form>\n\t         </div>\n         </div>\n\t </section>\n\n\t  \n    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\n    <!-- Include all compiled plugins (below), or include individual files as needed -->\n    <!-- bootstrap/js/bootstrap.min.js-->\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script>\n    <!-- Including dropzone.js library -->\n  </body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 305,
+        "y": 80,
+        "wires": [
+            [
+                "915be768.a47f58"
+            ]
+        ]
+    },
+    {
+        "id": "cafc002.d8d3d",
+        "type": "function",
+        "z": "d9147b7f.cb98c8",
+        "name": "Main filter",
+        "func": "function searchword(text, word)\n{\n\n    var x = 0, y=0;\n    var w = word;\n    \n    for (i=0;i< text.length;i++)\n        {\n        if(text[i] == word[0])\n            {\n                for(j=i;j< i+word.length;j++)\n                {\n                    if(text[j]==word[j-i])\n                    {\n                        y++;\n                    }\n                    if (y==word.length)\n                    {\n                        x++;\n                        \n                    }\n                }\n            y=0;\n            }\n        }\n    if(x > 0)\n    {\n        return w\n    }\n    else\n    {\n        return 0\n    }\n}\n\nfunction multicall2(list)\n{\n    var ultlist = [];\n    var size = [];\n    for(let i = 0;i<list.length;i++)\n    {\n        var semiult = [];\n        var big = list[i];\n        var take;\n        for(let j=0;j<big.length;j++)\n        {\n            take = searchword(msg.payload.pages[0].text, big[j]);\n            if (take == 0)\n            {\n                continue;\n            }\n            else\n            {\n                semiult.push(big[j]);\n            }\n        }\n        ultlist.push(semiult);\n        size.push(semiult.length);\n    }\n    return [ultlist,size];\n}\n\n\n\nvar ds = ['Deep Learning','Tensorflow','Pytorch','Keras','Caffe','CNN','RNN','Theaono','Sklearn','OpenCV','Django','Flask','Azure','Google Cloud','AWS','IBM'];\nvar wb = ['HTML','JavaScript','Apache','Spark','Django','Flask','Azure','Google Cloud','AWS','IBM','Ruby','Typescript','Swing','Db2','MySQL'];\nvar gd = ['C','C++','C#','C sharp','Javascript','Python','Java','Unity','Frostbite','Unreal Engine','GameMaker'];\nvar bc = ['Cryptography','Ethereum','Tether','Bitcoin','Mining','NEO','EOS','Swift','Javascript','Python','Solidity','Hyperledger'];\nvar main = [ds,wb,gd,bc];\nvar f,elements,sizes;\n\nf = multicall2(main);\n\nelements = f[0];\nsizes = f[1]\n\nvar stringg = ['DS','WB','GD','BC'];\n\nvar maxn = sizes.indexOf(Math.max.apply(null,sizes));\n\na = {payload : elements[maxn]};\nvar b = {payload : stringg[maxn]};\n\n\nreturn [a,b];\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 430,
+        "y": 150,
+        "wires": [
+            [],
+            [
+                "1480131f.6374bd",
+                "36588427.2b26ec"
+            ]
+        ]
+    },
+    {
+        "id": "87fb8c2d.1dcd1",
+        "type": "link out",
+        "z": "d9147b7f.cb98c8",
+        "name": "From String",
+        "links": [
+            "80eb7417.fe0fe8"
+        ],
+        "x": 1095,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "80eb7417.fe0fe8",
+        "type": "link in",
+        "z": "adcb4149.ab938",
+        "name": "To Swtich Node",
+        "links": [
+            "87fb8c2d.1dcd1"
+        ],
+        "x": 230,
+        "y": 105,
+        "wires": [
+            [
+                "c3509970.2d9f68"
+            ]
+        ]
+    },
+    {
+        "id": "e656813.dcc198",
+        "type": "debug",
+        "z": "adcb4149.ab938",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 710,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5e331c12.cdc714",
+        "type": "link out",
+        "z": 0,
+        "name": "From BOTS ",
+        "links": [
+            "547cf488.98149c"
+        ],
+        "x": 735,
+        "y": 95,
+        "wires": []
+    },
+    {
+        "id": "547cf488.98149c",
+        "type": "link in",
+        "z": "adcb4149.ab938",
+        "name": "To UI Control",
+        "links": [
+            "5e331c12.cdc714",
+            "fa8c2b58.a0cbd8",
+            "359f8007.8696"
+        ],
+        "x": 230,
+        "y": 40,
+        "wires": [
+            [
+                "c3509970.2d9f68"
+            ]
+        ]
+    },
+    {
+        "id": "2a825bba.4eeb54",
+        "type": "function",
+        "z": 0,
+        "name": "Take to the File upload page",
+        "func": "msg.payload = {\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\",\"Recrutio_Final\"],\"show\":[\"Recrutio_File_upload\"]}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 95,
+        "wires": [
+            [
+                "5e331c12.cdc714"
+            ]
+        ]
+    },
+    {
+        "id": "ab035aca.6adf68",
+        "type": "function",
+        "z": 0,
+        "name": "Empty the text bar",
+        "func": "msg.payload = \"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 135,
+        "y": 470,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "90603a94.d5afb8",
+        "type": "ui_form",
+        "z": "d07391d5.a8875",
+        "name": "Registration Form",
+        "label": "",
+        "group": "50e82898.0289b8",
+        "order": 1,
+        "width": 6,
+        "height": 7,
+        "options": [
+            {
+                "label": "Enter Full Name",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter a Username",
+                "value": "user",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Gender",
+                "value": "gender",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Phone number",
+                "value": "number",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Email",
+                "value": "email",
+                "type": "email",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Password",
+                "value": "pwd",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "user": "",
+            "gender": "",
+            "number": "",
+            "email": "",
+            "pwd": ""
+        },
+        "payload": "",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "topic": "",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "5cc00b1f.b10d84"
+            ]
+        ]
+    },
+    {
+        "id": "4326bef1.485fb",
+        "type": "cloudant out",
+        "z": "d07391d5.a8875",
+        "name": "Store data in cloud",
+        "cloudant": "",
+        "database": "applicant_details",
+        "service": "node-red-skyrim-cloudant-1593278215396-40063",
+        "payonly": true,
+        "operation": "insert",
+        "x": 640,
+        "y": 175,
+        "wires": []
+    },
+    {
+        "id": "5cc00b1f.b10d84",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "Rename the Payload",
+        "func": "msg.payload = {\n    _id:msg.payload.email,\n    Name:msg.payload.name,\n    Password:msg.payload.pwd,\n    Email:msg.payload.email,\n    Username:msg.payload.user,\n    Phone:msg.payload.number,\n    Gender:msg.payload.gender\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 395,
+        "y": 175,
+        "wires": [
+            [
+                "4326bef1.485fb",
+                "5cc976dc.c7ef58"
+            ]
+        ]
+    },
+    {
+        "id": "2f0a9c62.a94234",
+        "type": "ui_form",
+        "z": "d07391d5.a8875",
+        "name": "Login Form",
+        "label": "",
+        "group": "ff450e60.e3893",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "options": [
+            {
+                "label": "Enter email",
+                "value": "email",
+                "type": "email",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Enter Password",
+                "value": "pwd",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "email": "",
+            "pwd": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "39a5e931.a930e6"
+            ]
+        ]
+    },
+    {
+        "id": "a4ccd9ae.682198",
+        "type": "cloudant in",
+        "z": "d07391d5.a8875",
+        "name": "Retrieve Data",
+        "cloudant": "",
+        "database": "applicant_details",
+        "service": "node-red-skyrim-cloudant-1593278215396-40063",
+        "search": "_id_",
+        "design": "",
+        "index": "",
+        "x": 660,
+        "y": 275,
+        "wires": [
+            [
+                "172d5e55.b56182"
+            ]
+        ]
+    },
+    {
+        "id": "5180b1e.b6fe25",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "Set email",
+        "func": "var email = global.get(\"email\")\nmsg.payload = {\n    _id:email\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 275,
+        "wires": [
+            [
+                "a4ccd9ae.682198"
+            ]
+        ]
+    },
+    {
+        "id": "39a5e931.a930e6",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "Set Global Variables",
+        "func": "global.set(\"email\",msg.payload.email);\nglobal.set(\"pwd\",msg.payload.pwd);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 275,
+        "wires": [
+            [
+                "5180b1e.b6fe25"
+            ]
+        ]
+    },
+    {
+        "id": "1060fe5a.a9a342",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "If Not Null",
+        "func": "var pwd = global.get(\"pwd\");\nvar pass = msg.payload.Password;\nvar msg1,msg2;\nif(pass == pwd)\n{\n    msg1 = {payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_File_upload\"]}}};\n    msg2 = {payload:\"Login Successful. Welcome!\"};\n    return [msg1,msg2];\n}\nelse\n{\n    msg2 = {payload:\"Invalid Password. Try Again.\"};\n    return [[],msg2];\n}\nreturn;",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 970,
+        "y": 245,
+        "wires": [
+            [
+                "7e3dad1d.f40c04"
+            ],
+            [
+                "558816f9.44a2c8"
+            ]
+        ]
+    },
+    {
+        "id": "558816f9.44a2c8",
+        "type": "ui_text",
+        "z": "d07391d5.a8875",
+        "group": "ff450e60.e3893",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "name": "Display Login Status",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1175,
+        "y": 305,
+        "wires": []
+    },
+    {
+        "id": "a707cfc6.37033",
+        "type": "ui_button",
+        "z": "d07391d5.a8875",
+        "name": "",
+        "group": "80024bc1.b6a528",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "Login",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_Login\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 280,
+        "y": 55,
+        "wires": [
+            [
+                "fa8c2b58.a0cbd8",
+                "b480bacc.855b68"
+            ]
+        ]
+    },
+    {
+        "id": "3496dd8c.fe64d2",
+        "type": "ui_button",
+        "z": "d07391d5.a8875",
+        "name": "",
+        "group": "80024bc1.b6a528",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "Register",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_Registration\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "fa8c2b58.a0cbd8",
+                "b480bacc.855b68"
+            ]
+        ]
+    },
+    {
+        "id": "2cbf1b7f.2fc2c4",
+        "type": "ui_text",
+        "z": "d07391d5.a8875",
+        "group": "50e82898.0289b8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Display Registration Status",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fb28afc6.07a1a",
+        "type": "complete",
+        "z": "d07391d5.a8875",
+        "name": "From registration go to login page",
+        "scope": [
+            "5cc976dc.c7ef58"
+        ],
+        "uncaught": false,
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "a08dae7.65f185"
+            ]
+        ]
+    },
+    {
+        "id": "cefdfc33.0548f",
+        "type": "complete",
+        "z": "d07391d5.a8875",
+        "name": "If login not found goto registration",
+        "scope": [
+            "f3b6fb8c.d3ae48"
+        ],
+        "uncaught": false,
+        "x": 160,
+        "y": 395,
+        "wires": [
+            [
+                "25f66d83.b57db2"
+            ]
+        ]
+    },
+    {
+        "id": "f3b6fb8c.d3ae48",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "If Null",
+        "func": "msg.payload = \"No records found. You are being redirected to the Registration Page.\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 960,
+        "y": 305,
+        "wires": [
+            [
+                "558816f9.44a2c8"
+            ]
+        ]
+    },
+    {
+        "id": "172d5e55.b56182",
+        "type": "switch",
+        "z": "d07391d5.a8875",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 275,
+        "wires": [
+            [
+                "1060fe5a.a9a342"
+            ],
+            [
+                "f3b6fb8c.d3ae48"
+            ]
+        ]
+    },
+    {
+        "id": "25f66d83.b57db2",
+        "type": "delay",
+        "z": "d07391d5.a8875",
+        "name": "Give a Delay",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 415,
+        "y": 395,
+        "wires": [
+            [
+                "3496dd8c.fe64d2"
+            ]
+        ]
+    },
+    {
+        "id": "5cc976dc.c7ef58",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "To Display the Status",
+        "func": "msg.payload = \"Hey! \"+ msg.payload.Name + \" Registration successful. You will be redirected shortly.\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 395,
+        "y": 225,
+        "wires": [
+            [
+                "2cbf1b7f.2fc2c4"
+            ]
+        ]
+    },
+    {
+        "id": "a08dae7.65f185",
+        "type": "delay",
+        "z": "d07391d5.a8875",
+        "name": "Give a Delay",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 415,
+        "y": 340,
+        "wires": [
+            [
+                "a707cfc6.37033"
+            ]
+        ]
+    },
+    {
+        "id": "fa8c2b58.a0cbd8",
+        "type": "link out",
+        "z": "d07391d5.a8875",
+        "name": "",
+        "links": [
+            "547cf488.98149c"
+        ],
+        "x": 515,
+        "y": 55,
+        "wires": []
+    },
+    {
+        "id": "7e3dad1d.f40c04",
+        "type": "delay",
+        "z": "d07391d5.a8875",
+        "name": "Give a Delay",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1175,
+        "y": 240,
+        "wires": [
+            [
+                "fa8c2b58.a0cbd8"
+            ]
+        ]
+    },
+    {
+        "id": "6b53f9e0.5927b8",
+        "type": "ui_button",
+        "z": "d07391d5.a8875",
+        "name": "Go To Home Page",
+        "group": "ff450e60.e3893",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_Home_page\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 120,
+        "y": 435,
+        "wires": [
+            [
+                "fa8c2b58.a0cbd8"
+            ]
+        ]
+    },
+    {
+        "id": "d79b2386.1360b",
+        "type": "ui_button",
+        "z": "d07391d5.a8875",
+        "name": "Go To Home Page",
+        "group": "50e82898.0289b8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_Home_page\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 120,
+        "y": 475,
+        "wires": [
+            [
+                "fa8c2b58.a0cbd8"
+            ]
+        ]
+    },
+    {
+        "id": "ebe922ae.57642",
+        "type": "complete",
+        "z": "d07391d5.a8875",
+        "name": "Empty the Registration status",
+        "scope": [],
+        "uncaught": false,
+        "x": 145,
+        "y": 560,
+        "wires": [
+            [
+                "1b0039bd.bb26d6"
+            ]
+        ]
+    },
+    {
+        "id": "2e826a26.b267a6",
+        "type": "complete",
+        "z": "d07391d5.a8875",
+        "name": "Empty for Login",
+        "scope": [
+            "9f0118dc.29b118"
+        ],
+        "uncaught": false,
+        "x": 105,
+        "y": 520,
+        "wires": [
+            [
+                "1b0039bd.bb26d6"
+            ]
+        ]
+    },
+    {
+        "id": "1b0039bd.bb26d6",
+        "type": "trigger",
+        "z": "d07391d5.a8875",
+        "op1": " ",
+        "op2": " ",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 365,
+        "y": 545,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9915ff59.9656",
+        "type": "function",
+        "z": 0,
+        "name": "Filter out the messgae",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://cdn1.bbcode0.com/uploads/2020/7/6/b7d1f56f92f714b2fc68b2778bbf6eea-full.png\";\n    msg.payload = msg.payload.output.text.join(\" \");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 705,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b9c2ff3.97b44",
+        "type": "watson-conversation-v1",
+        "z": 0,
+        "name": "",
+        "workspaceid": "f5865484-285c-4412-9598-f46fe8e03f54",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "https://api.us-south.assistant.watson.cloud.ibm.com/instances/939d9dfd-bdbd-4dbd-b3b9-73ddbf09d2bf",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 495,
+        "y": 260,
+        "wires": [
+            [
+                "9915ff59.9656",
+                "c8f705ea.a8bb18"
+            ]
+        ]
+    },
+    {
+        "id": "fa0c4631.11c338",
+        "type": "watson-conversation-v1",
+        "z": 0,
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 495,
+        "y": 405,
+        "wires": [
+            [
+                "c8f705ea.a8bb18",
+                "ea8d325d.b0102"
+            ]
+        ]
+    },
+    {
+        "id": "1493e32a.f3004d",
+        "type": "watson-conversation-v1",
+        "z": 0,
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 490,
+        "y": 540,
+        "wires": [
+            [
+                "c8f705ea.a8bb18",
+                "1c845dba.70e992"
+            ]
+        ]
+    },
+    {
+        "id": "232a579c.47e138",
+        "type": "function",
+        "z": "d9147b7f.cb98c8",
+        "name": "Datascience Page",
+        "func": "msg.payload = {\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_Final\"],\"show\":[\"Recrutio_DS\"]}};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 110,
+        "wires": [
+            [
+                "87fb8c2d.1dcd1"
+            ]
+        ]
+    },
+    {
+        "id": "b891f31e.9827",
+        "type": "function",
+        "z": "d9147b7f.cb98c8",
+        "name": "Web Development Page",
+        "func": "msg.payload = {\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_GD\",\"Recrutio_BC\",\"Recrutio_Final\"],\"show\":[\"Recrutio_WB\"]}};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 145,
+        "wires": [
+            [
+                "87fb8c2d.1dcd1"
+            ]
+        ]
+    },
+    {
+        "id": "1480131f.6374bd",
+        "type": "switch",
+        "z": "d9147b7f.cb98c8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "DS",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "WB",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "GD",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "BC",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 590,
+        "y": 160,
+        "wires": [
+            [
+                "232a579c.47e138"
+            ],
+            [
+                "b891f31e.9827"
+            ],
+            [
+                "294fd10b.937e2e"
+            ],
+            [
+                "1cf9e4eb.3e481b"
+            ]
+        ]
+    },
+    {
+        "id": "294fd10b.937e2e",
+        "type": "function",
+        "z": "d9147b7f.cb98c8",
+        "name": "Game Development Page",
+        "func": "msg.payload = {\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_Final\"],\"show\":[\"Recrutio_GD\"]}};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 180,
+        "wires": [
+            [
+                "87fb8c2d.1dcd1"
+            ]
+        ]
+    },
+    {
+        "id": "c8f705ea.a8bb18",
+        "type": "function",
+        "z": 0,
+        "name": "Evaluate",
+        "func": "if(msg.payload.context.ratings === true)\n{\n    var usereq = [msg.payload.context.basicrate,msg.payload.context.framerate,msg.payload.context.dbrate,msg.payload.context.cloudrate];\n    var sum = usereq.reduce(function(a,b){return a+b},0);\n    \n    var clearconvo = {payload : \"bye\"};\n    \n    var m={\n        \"series\":[\"YouRatings\"],\n        \"data\":[usereq[0],usereq[1],usereq[2],usereq[3]],\n        \"labels\":[\"BasicRate\",\"FrameRate\",\"DbRate\",\"CloudRate\"]\n    };\n    \n    if(sum>12)\n    {\n        return [{payload:[m]},{payload : \"You have been Shortlisted\"},clearconvo,{payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\"],\"show\":[\"Recrutio_Final\"]}}}];\n    }\n    else\n    {\n        return [{payload:[m]},{payload : \"Sorry. You aren't shortlisted\"},clearconvo,{payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\"],\"show\":[\"Recrutio_Final\"]}}}];\n    }\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 655,
+        "y": 190,
+        "wires": [
+            [],
+            [],
+            [
+                "7b9c2ff3.97b44",
+                "fa0c4631.11c338",
+                "1493e32a.f3004d",
+                "b7210434.413e38"
+            ],
+            [
+                "5e331c12.cdc714"
+            ]
+        ]
+    },
+    {
+        "id": "b7210434.413e38",
+        "type": "watson-conversation-v1",
+        "z": 0,
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 490,
+        "y": 665,
+        "wires": [
+            [
+                "c8f705ea.a8bb18",
+                "823adee8.e5593"
+            ]
+        ]
+    },
+    {
+        "id": "1cf9e4eb.3e481b",
+        "type": "function",
+        "z": "d9147b7f.cb98c8",
+        "name": "Blockchain Page",
+        "func": "msg.payload = {\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_Final\"],\"show\":[\"Recrutio_BC\"]}};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 805,
+        "y": 215,
+        "wires": [
+            [
+                "87fb8c2d.1dcd1"
+            ]
+        ]
+    },
+    {
+        "id": "a3a66391.ab57",
+        "type": "comment",
+        "z": 0,
+        "name": "Basic Skills taken",
+        "info": "# There will be 4 skills given for each chatbot.\n\nbasicrate\nframerate\ndbrate\ncloudrate\n\n\n## This is extra\nlead\nteams\ntime\ndecision",
+        "x": 970,
+        "y": 70,
+        "wires": []
+    },
+    {
+        "id": "a3c815f5.2ef038",
+        "type": "function",
+        "z": 0,
+        "d": true,
+        "name": "Shortlisting Approach 2",
+        "func": "if(msg.payload.context.ratings === true)\n{\n    var companyreq = [];\n    var usereq = [msg.payload.context.basicrate,msg.payload.context.framerate,msg.payload.context.dbrate,msg.payload.context.cloudrate];\n    var howmany = 0;\n    var msg2;\n    var clearconvo = {payload:\"Bye\"};\n    \n    for(let i = 0;i<4;i++)\n    {\n        companyreq.push(Math.floor(Math.random() * 5) + 1);\n    }\n    \n    for(let i=0;i<4;i++)\n    {\n        if(usereq[i]>=companyreq[i])\n        {\n            howmany += 1;\n        }\n    }\n    \n    \n    if(howmany >= 2)\n    {\n        msg2 ={payload: \"You Have Been Short listed.\"}; \n    }\n    else\n    {\n        msg2 ={payload:\"Sorry. Your skillset doesn't match the requirements.\"};\n    }\n    \n    var m={\n        \"series\":[\"YourRatings\",\"CompanyRequirements\"],\n        \"data\":[[usereq[0],usereq[1],usereq[2],usereq[3]],[companyreq[0],companyreq[1],companyreq[2],companyreq[3]]],\n        \"labels\":[\"BasicRate\",\"FrameRate\",\"DbRate\",\"CloudRate\"]\n    };\n    return [{payload:[m]},msg2,clearconvo,{payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\"],\"show\":[\"Recrutio_Final\"]}}}];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 1115,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "64ed48c9.a19018",
+        "type": "function",
+        "z": 0,
+        "name": "Clear the chart and the text box",
+        "func": "return [{payload : []},{payload:\"\"}];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1260,
+        "y": 510,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "913d18ac.9f0f18",
+        "type": "delay",
+        "z": 0,
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 455,
+        "y": 180,
+        "wires": [
+            [
+                "2a825bba.4eeb54"
+            ]
+        ]
+    },
+    {
+        "id": "69aed8b.17c4728",
+        "type": "function",
+        "z": 0,
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "7b9c2ff3.97b44"
+            ]
+        ]
+    },
+    {
+        "id": "44d9e822.925008",
+        "type": "function",
+        "z": 0,
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 405,
+        "wires": [
+            [
+                "fa0c4631.11c338"
+            ]
+        ]
+    },
+    {
+        "id": "45da840f.ed669c",
+        "type": "function",
+        "z": 0,
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 540,
+        "wires": [
+            [
+                "1493e32a.f3004d"
+            ]
+        ]
+    },
+    {
+        "id": "ee8fa7df.2b0718",
+        "type": "function",
+        "z": 0,
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 325,
+        "y": 665,
+        "wires": [
+            [
+                "b7210434.413e38"
+            ]
+        ]
+    },
+    {
+        "id": "ea8d325d.b0102",
+        "type": "function",
+        "z": 0,
+        "name": "Filter out the messgae",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://images.provenexpert.com/a5/fb/022a65b88a12f323b9a56b157154/recrutio-gbr_full_1561114631.jpg\";\n    msg.payload = msg.payload.output.text.join(\"\\n\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 405,
+        "wires": [
+            [
+                "dee56080.d873f"
+            ]
+        ]
+    },
+    {
+        "id": "1c845dba.70e992",
+        "type": "function",
+        "z": 0,
+        "name": "Filter out the messgae",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://images.provenexpert.com/a5/fb/022a65b88a12f323b9a56b157154/recrutio-gbr_full_1561114631.jpg\";\n    msg.payload = msg.payload.output.text.join(\"\\n\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 675,
+        "y": 530,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "823adee8.e5593",
+        "type": "function",
+        "z": 0,
+        "name": "Filter out the messgae",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://images.provenexpert.com/a5/fb/022a65b88a12f323b9a56b157154/recrutio-gbr_full_1561114631.jpg\";\n    msg.payload = msg.payload.output.text.join(\"\\n\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 685,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dee56080.d873f",
+        "type": "ui_template",
+        "z": 0,
+        "group": "e1a6cd47.86bf8",
+        "name": "",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "format": "<img ng-src={{msg.url}} alt=\"Image\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 910,
+        "y": 345,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97a0c292.3a992",
+        "type": "link in",
+        "z": 0,
+        "name": "",
+        "links": [
+            "c6e7d824.f04098"
+        ],
+        "x": 95,
+        "y": 60,
+        "wires": [
+            [
+                "7b9c2ff3.97b44",
+                "fa0c4631.11c338",
+                "1493e32a.f3004d",
+                "b7210434.413e38"
+            ]
+        ]
+    },
+    {
+        "id": "36588427.2b26ec",
+        "type": "function",
+        "z": "d9147b7f.cb98c8",
+        "name": "bye",
+        "func": "msg.payload = \"bye\";\nmsg.params = {\n    context : {}\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "c6e7d824.f04098"
+            ]
+        ]
+    },
+    {
+        "id": "c6e7d824.f04098",
+        "type": "link out",
+        "z": "d9147b7f.cb98c8",
+        "name": "bye",
+        "links": [
+            "593588b7.7d0778"
+        ],
+        "x": 515,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b480bacc.855b68",
+        "type": "function",
+        "z": "d07391d5.a8875",
+        "name": "",
+        "func": "msg.payload = \"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 670,
+        "y": 40,
+        "wires": [
+            [
+                "2cbf1b7f.2fc2c4",
+                "558816f9.44a2c8"
+            ]
+        ]
+    },
+    {
+        "id": "4205817c.98f1c",
+        "type": "ui_text",
+        "z": "abb8de80.1714d",
+        "group": "45aa773e.385c78",
+        "order": 2,
+        "width": 5,
+        "height": 2,
+        "name": "Datascience Bot",
+        "label": "Bot:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 940,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e6e6d0a3.ca5a5",
+        "type": "ui_text",
+        "z": "abb8de80.1714d",
+        "group": "e1a6cd47.86bf8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Web Development Bot",
+        "label": "Bot:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 915,
+        "y": 405,
+        "wires": []
+    },
+    {
+        "id": "6e109f0b.4365e",
+        "type": "ui_text",
+        "z": "abb8de80.1714d",
+        "group": "fae750bd.dc8aa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Game Development Bot",
+        "label": "Bot:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 935,
+        "y": 530,
+        "wires": []
+    },
+    {
+        "id": "359f8007.8696",
+        "type": "link out",
+        "z": "abb8de80.1714d",
+        "name": "From BOTS ",
+        "links": [
+            "547cf488.98149c"
+        ],
+        "x": 735,
+        "y": 95,
+        "wires": []
+    },
+    {
+        "id": "266452fc.b05c1e",
+        "type": "ui_button",
+        "z": "abb8de80.1714d",
+        "name": "DS -> FileUpload",
+        "group": "45aa773e.385c78",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 255,
+        "y": 35,
+        "wires": [
+            [
+                "22a4359e.45979a"
+            ]
+        ]
+    },
+    {
+        "id": "e76ca9e9.477918",
+        "type": "ui_button",
+        "z": "abb8de80.1714d",
+        "name": "Wb -> FileUpload",
+        "group": "e1a6cd47.86bf8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 255,
+        "y": 75,
+        "wires": [
+            [
+                "22a4359e.45979a"
+            ]
+        ]
+    },
+    {
+        "id": "b7cf795.dd5b788",
+        "type": "ui_button",
+        "z": "abb8de80.1714d",
+        "name": "GD -> FileUpload",
+        "group": "fae750bd.dc8aa",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 255,
+        "y": 120,
+        "wires": [
+            [
+                "22a4359e.45979a"
+            ]
+        ]
+    },
+    {
+        "id": "22a4359e.45979a",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Take to the File upload page",
+        "func": "msg.payload = {\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\",\"Recrutio_Final\"],\"show\":[\"Recrutio_File_upload\"]}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 95,
+        "wires": [
+            [
+                "359f8007.8696"
+            ]
+        ]
+    },
+    {
+        "id": "460d9ae0.648ac4",
+        "type": "ui_text_input",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "label": "You:",
+        "tooltip": "",
+        "group": "45aa773e.385c78",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "49128f0c.08797",
+                "560253d2.f860dc"
+            ]
+        ]
+    },
+    {
+        "id": "573afe67.cf8bc",
+        "type": "ui_text_input",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "label": "You:",
+        "tooltip": "",
+        "group": "e1a6cd47.86bf8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "x": 150,
+        "y": 405,
+        "wires": [
+            [
+                "49128f0c.08797",
+                "a578cf1e.aa10b"
+            ]
+        ]
+    },
+    {
+        "id": "9b80d115.d3f97",
+        "type": "ui_text_input",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "label": "You:",
+        "tooltip": "",
+        "group": "fae750bd.dc8aa",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "x": 165,
+        "y": 545,
+        "wires": [
+            [
+                "49128f0c.08797",
+                "48ddff0.e9e78"
+            ]
+        ]
+    },
+    {
+        "id": "49128f0c.08797",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Empty the text bar",
+        "func": "msg.payload = \"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 135,
+        "y": 470,
+        "wires": [
+            [
+                "460d9ae0.648ac4",
+                "573afe67.cf8bc",
+                "9b80d115.d3f97",
+                "866e0c2f.66e86"
+            ]
+        ]
+    },
+    {
+        "id": "bc0a8cdd.756ca",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Filter out the message",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://cdn1.bbcode0.com/uploads/2020/7/6/263e04fbca6c29330ef3c7cd59c15d48-full.png\";\n    msg.payload = msg.payload.output.text.join(\" \");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 705,
+        "y": 260,
+        "wires": [
+            [
+                "4205817c.98f1c",
+                "c5d4c5a.082c638"
+            ]
+        ]
+    },
+    {
+        "id": "e4fe4823.e76458",
+        "type": "watson-conversation-v1",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "workspaceid": "f5865484-285c-4412-9598-f46fe8e03f54",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "https://api.us-south.assistant.watson.cloud.ibm.com/instances/939d9dfd-bdbd-4dbd-b3b9-73ddbf09d2bf",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "bc0a8cdd.756ca",
+                "2c152f8a.37aab",
+                "9df2e9cd.aa0ba8"
+            ]
+        ]
+    },
+    {
+        "id": "55a9441b.65affc",
+        "type": "watson-conversation-v1",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 495,
+        "y": 405,
+        "wires": [
+            [
+                "2c152f8a.37aab",
+                "f995a1a3.2ae84",
+                "9df2e9cd.aa0ba8"
+            ]
+        ]
+    },
+    {
+        "id": "bd0dc018.f81b7",
+        "type": "watson-conversation-v1",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 490,
+        "y": 540,
+        "wires": [
+            [
+                "2c152f8a.37aab",
+                "6b74513e.0e17e",
+                "9df2e9cd.aa0ba8"
+            ]
+        ]
+    },
+    {
+        "id": "2c152f8a.37aab",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "d": true,
+        "name": "Evaluate",
+        "func": "if(msg.payload.context.ratings === true)\n{\n    var usereq = [msg.payload.context.basicrate,msg.payload.context.framerate,msg.payload.context.dbrate,msg.payload.context.cloudrate];\n    var sum = usereq.reduce(function(a,b){return a+b},0);\n    \n    var clearconvo = {payload : \"You will be directed to the Results Page shortly!\"};\n    \n    var m = {\n        \"series\":[\"YouRatings\"],\n        \"data\":[usereq[0],usereq[1],usereq[2],usereq[3]],\n        \"labels\":[\"BasicRate\",\"FrameRate\",\"DbRate\",\"CloudRate\"]\n    };\n    \n    if(sum>12)\n    {\n        return [{payload:[m]},{payload : \"You have been Shortlisted\"},clearconvo,{payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\"],\"show\":[\"Recrutio_Final\"]}}}];\n    }\n    else\n    {\n        return [{payload:[m]},{payload : \"Sorry. You aren't shortlisted\"},clearconvo,{payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\"],\"show\":[\"Recrutio_Final\"]}}}];\n    }\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "413fb3a3.acb02c"
+            ],
+            [
+                "7b545b26.fd5734"
+            ],
+            [
+                "4205817c.98f1c",
+                "e6e6d0a3.ca5a5",
+                "6e109f0b.4365e",
+                "391ec532.994b1a"
+            ],
+            [
+                "df526e51.c2105"
+            ]
+        ]
+    },
+    {
+        "id": "866e0c2f.66e86",
+        "type": "ui_text_input",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "label": "You:",
+        "tooltip": "",
+        "group": "d3200f58.fbcae",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "x": 170,
+        "y": 665,
+        "wires": [
+            [
+                "245ac70c.3ab338"
+            ]
+        ]
+    },
+    {
+        "id": "2799ad1c.9e1d92",
+        "type": "watson-conversation-v1",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 490,
+        "y": 665,
+        "wires": [
+            [
+                "2c152f8a.37aab",
+                "86f3b628.9d2bf8",
+                "9df2e9cd.aa0ba8"
+            ]
+        ]
+    },
+    {
+        "id": "391ec532.994b1a",
+        "type": "ui_text",
+        "z": "abb8de80.1714d",
+        "group": "d3200f58.fbcae",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "BlockChain Bot",
+        "label": "Bot:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 920,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a957c96f.f80448",
+        "type": "ui_button",
+        "z": "abb8de80.1714d",
+        "name": "BC -> FileUpload",
+        "group": "d3200f58.fbcae",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 255,
+        "y": 160,
+        "wires": [
+            [
+                "22a4359e.45979a"
+            ]
+        ]
+    },
+    {
+        "id": "413fb3a3.acb02c",
+        "type": "ui_chart",
+        "z": "abb8de80.1714d",
+        "name": "Display the user ratings vs company req ratings",
+        "group": "e21e77c4.101418",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Recruitio calculated your stats, here are those.",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Recruitio is summarizing...",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 1420,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b545b26.fd5734",
+        "type": "ui_text",
+        "z": "abb8de80.1714d",
+        "group": "e21e77c4.101418",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Display If Shortlisted or Not",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1240,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b60b7719.0af9e8",
+        "type": "ui_button",
+        "z": "abb8de80.1714d",
+        "name": "Final -> FileUpload",
+        "group": "e21e77c4.101418",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "File Upload",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 255,
+        "y": 200,
+        "wires": [
+            [
+                "c37870f6.f78f2",
+                "25d746eb.d9df5a"
+            ]
+        ]
+    },
+    {
+        "id": "cd5a5c00.3cd31",
+        "type": "comment",
+        "z": "abb8de80.1714d",
+        "name": "Basic Skills taken",
+        "info": "# There will be 4 skills given for each chatbot.\n\nbasicrate\nframerate\ndbrate\ncloudrate\n\n\n## This is extra\nlead\nteams\ntime\ndecision",
+        "x": 970,
+        "y": 70,
+        "wires": []
+    },
+    {
+        "id": "9df2e9cd.aa0ba8",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Shortlisting Approach 2",
+        "func": "if(msg.payload.context.ratings === true)\n{\n    var companyreq = [];\n    var usereq = [msg.payload.context.basicrate,msg.payload.context.framerate,msg.payload.context.dbrate,msg.payload.context.cloudrate];\n    var howmany = 0;\n    var n = msg.payload.context.name;\n    var msg2;\n    var clearconvo = {payload:\"You will be directed to the Results Page shortly!\"};\n    \n    for(let i = 0;i<4;i++)\n    {\n        companyreq.push(Math.floor(Math.random() * 3) + 3);\n    }\n    \n    for(let i=0;i<4;i++)\n    {\n        if(usereq[i]>=companyreq[i])\n        {\n            howmany += 1;\n        }\n    }\n\n    \n    if(howmany >= 2)\n    {\n        msg2 ={payload: \"Congrats! \" +n+ \". You Have Been Shortlisted.\"}; \n    }\n    else\n    {\n        msg2 ={payload:\"Sorry, \" +n+ \". Your skillset doesn't match the requirements.\"};\n    }\n    \n    var m={\n        \"series\":[\"Your Ratings\",\"Company Requirements\"],\n        \"data\":[[usereq[0],usereq[1],usereq[2],usereq[3]],[companyreq[0],companyreq[1],companyreq[2],companyreq[3]]],\n        \"labels\":[\"BasicRate\",\"FrameRate\",\"DbRate\",\"CloudRate\"]\n    };\n    return [{payload:[m]},msg2,clearconvo,{payload:{\"group\":{\"hide\":[\"Recrutio_Home_page\",\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_DS\",\"Recrutio_WB\",\"Recrutio_GD\",\"Recrutio_BC\"],\"show\":[\"Recrutio_Final\"]}}}];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 1170,
+        "y": 120,
+        "wires": [
+            [
+                "413fb3a3.acb02c"
+            ],
+            [
+                "7b545b26.fd5734"
+            ],
+            [
+                "4205817c.98f1c",
+                "e6e6d0a3.ca5a5",
+                "6e109f0b.4365e",
+                "391ec532.994b1a"
+            ],
+            [
+                "df526e51.c2105"
+            ]
+        ]
+    },
+    {
+        "id": "25d746eb.d9df5a",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Clear the chart and the text box",
+        "func": "return [{payload : []},{payload:\"\"}];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1260,
+        "y": 510,
+        "wires": [
+            [
+                "413fb3a3.acb02c"
+            ],
+            [
+                "7b545b26.fd5734"
+            ]
+        ]
+    },
+    {
+        "id": "c37870f6.f78f2",
+        "type": "delay",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "22a4359e.45979a"
+            ]
+        ]
+    },
+    {
+        "id": "7c5d4d36.67b344",
+        "type": "ui_button",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "group": "e21e77c4.101418",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Logout",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Recrutio_Login\",\"Recrutio_Registration\",\"Recrutio_File_upload\",\"Recrutio_GD\",\"Recrutio_WB\",\"Recrutio_BC\",\"Recrutio_DS\",\"Recrutio_Final\"],\"show\":[\"Recrutio_Home_page\"]}}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 1150,
+        "y": 560,
+        "wires": [
+            [
+                "359f8007.8696"
+            ]
+        ]
+    },
+    {
+        "id": "560253d2.f860dc",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "e4fe4823.e76458"
+            ]
+        ]
+    },
+    {
+        "id": "a578cf1e.aa10b",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "55a9441b.65affc"
+            ]
+        ]
+    },
+    {
+        "id": "48ddff0.e9e78",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 540,
+        "wires": [
+            [
+                "bd0dc018.f81b7"
+            ]
+        ]
+    },
+    {
+        "id": "245ac70c.3ab338",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Solve payload error",
+        "func": "let c = msg.payload;\nif(c !== \"\")\n{\nmsg.payload = c;\nreturn msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 325,
+        "y": 665,
+        "wires": [
+            [
+                "2799ad1c.9e1d92"
+            ]
+        ]
+    },
+    {
+        "id": "c5d4c5a.082c638",
+        "type": "ui_template",
+        "z": "abb8de80.1714d",
+        "group": "45aa773e.385c78",
+        "name": "",
+        "order": 1,
+        "width": 5,
+        "height": 6,
+        "format": "<img ng-src={{msg.url}} alt=\"Image\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 940,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f995a1a3.2ae84",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Filter out the message",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://cdn1.bbcode0.com/uploads/2020/7/6/263e04fbca6c29330ef3c7cd59c15d48-full.png\";\n    msg.payload = msg.payload.output.text.join(\"\\n\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 405,
+        "wires": [
+            [
+                "e6e6d0a3.ca5a5"
+            ]
+        ]
+    },
+    {
+        "id": "6b74513e.0e17e",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Filter out the message",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://cdn1.bbcode0.com/uploads/2020/7/6/263e04fbca6c29330ef3c7cd59c15d48-full.png\";\n    msg.payload = msg.payload.output.text.join(\"\\n\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 675,
+        "y": 530,
+        "wires": [
+            [
+                "42dfe16a.c21f3",
+                "6e109f0b.4365e"
+            ]
+        ]
+    },
+    {
+        "id": "86f3b628.9d2bf8",
+        "type": "function",
+        "z": "abb8de80.1714d",
+        "name": "Filter out the message",
+        "func": "if(msg.payload.output.generic[0].response_type==\"image\")\n{\n    msg.url = msg.payload.output.generic[0].source;\n    msg.payload = msg.payload.output.generic[0].title;\n}\nelse\n{\n    msg.url = \"https://cdn1.bbcode0.com/uploads/2020/7/6/263e04fbca6c29330ef3c7cd59c15d48-full.png\";\n    msg.payload = msg.payload.output.text.join(\"\\n\");\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 685,
+        "y": 660,
+        "wires": [
+            [
+                "3da6441d.7238fc",
+                "391ec532.994b1a"
+            ]
+        ]
+    },
+    {
+        "id": "42dfe16a.c21f3",
+        "type": "ui_template",
+        "z": "abb8de80.1714d",
+        "group": "fae750bd.dc8aa",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<img ng-src={{msg.url}} alt=\"Image\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 895,
+        "y": 490,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3da6441d.7238fc",
+        "type": "ui_template",
+        "z": "abb8de80.1714d",
+        "group": "d3200f58.fbcae",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<img ng-src={{msg.url}} alt=\"Image\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 900,
+        "y": 605,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "593588b7.7d0778",
+        "type": "link in",
+        "z": "abb8de80.1714d",
+        "name": "bye",
+        "links": [
+            "c6e7d824.f04098"
+        ],
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "e4fe4823.e76458"
+            ]
+        ]
+    },
+    {
+        "id": "df526e51.c2105",
+        "type": "delay",
+        "z": "abb8de80.1714d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1100,
+        "y": 280,
+        "wires": [
+            [
+                "359f8007.8696"
+            ]
+        ]
+    },
+    {
+        "id": "97949665.afc1c8",
+        "type": "ui_template",
+        "z": "d07391d5.a8875",
+        "group": "80024bc1.b6a528",
+        "name": "Homepage",
+        "order": 1,
+        "width": 10,
+        "height": 10,
+        "format": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n<meta name=\"description\" content=\"\">\n<meta name=\"keywords\" content=\"\">\n<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\">\n<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n<link rel=\"canonical\" href=\"\">\n<style type=\"text/css\">\n    :root {\n        --template-primary-color: rgb(51,204,15);\n        --template-primary-color-transparency: rgba(51,204,153,.7);\n        --template-body-background: #eee;\n        --template-footer-background: #333;\n    }\n    /Template CSS/\n    body {\n        background: var(--template-body-background);\n    }\n    #branch .container .row p{\n        font-size: 1.5em;\n        font-family: \"Lucida Console\";\n    }\n    .header {\n        height: 110px;\n        background-size: cover;\n        background-position: center center;\n        background: var(--template-primary-color-transparency);\n\n    }\n    .heading-container {\n        background: black;\n        height: 110px;\n    }\n    .main {\n        margin-top: 0px;\n        display: flex;\n        background-image: url(\"https://i.imgur.com/wmqsMY6.png\");\n    }\n    #quote{\n        flex: 1;\n    }\n    #branch{\n        flex: 1;\n        display: flex;\n        flex-direction:column;\n    }\n\n    .wide-callout {\n        background: var(--template-primary-color-transparency);\n    }\n    .wide-callout-white {\n        background: #fff;\n    }\n    .email-link, .email-link:hover {\n        color: var(--template-primary-color);\n    }\n    .footer-inner {\n        background: var(--template-footer-background);\n    }\n    .footer a {\n        color: var(--template-primary-color);\n    }\n    .footer a.footer-social-link:hover {\n        text-decoration: none;\n    }\n    .contact-form-link {\n        color: var(--template-primary-color);\n        cursor: pointer;\n    }\n    .contact-form-link:hover {\n        text-decoration: underline;\n    }\n\n    @media (min-width: 851px) {\n        .header {\n            background: url('../img/bg-unsplash-1800.jpg');\n        }\n    }\n\n    @media (max-width: 850px) {\n        .header {\n            background: url('../img/bg-unsplash-850.jpg');\n        }\n    }\n\n    @media (max-width: 767px) {\n        .heading-container h1.display-4 {\n            font-size: 2.9rem;\n        }\n        .heading-container h2.lead {\n            font-size: 1.1rem;\n        }\n        .main {\n            margin-top: 0px;\n        }\n        .footer-inner-content {\n            text-align: center;\n        }\n        .footer-inner-content ul.nav {\n            display: inline-block;\n            margin-top: .5rem;\n        }\n        .footer-inner-content ul.nav li {\n            height: 1.5rem;\n        }\n    }\n\n    @media (max-width: 575px) {\n        .header {\n            background: none;\n        }\n        .heading-container h1.display-4 {\n            font-size: 2rem;\n        }\n        .heading-container h2.lead {\n            font-size: 1rem;\n        }\n        .feature-block, .contact-block {\n            margin-bottom: 1rem;\n        }\n    }\n</style>\n\n</head>\n<body>\n    <div class=\"container-fluid px-0\">\n        <header class=\"header\">\n            <div class=\"heading-container\">\n                <h3 class=\"mb-2 px-1 text-center display-4 text-white\" style=\"font-family:Bradley Hand,cursive\"><strong>RECRUITIO</strong></h3>\n                <h4 class=\"pb-3 px-4 mx-5 text-center lead text-white\" style=\"font-family:Marker Felt,cursive\"><strong> A smart Chatbot enabled Recruiter </strong></h4>\n            </div>\n        </header>\n        <main role=\"main\" class=\"main\">\n            <section id=\"quote\" class=\"shadow-lg\" role=\"region\">\n                <div class=\"container\">\n                    <div class=\"row\">\n                        <div  class=\"col text-center py-2 \">\n                            <h4 class=\"text-black mb-3\"><strong>The Who is more important than the What, At the end of the day,\nyou bet on people, not on strategies.</strong></h4>\n                            <h3 class=\"author\" style=\"font-family:Comic Sans cursive; text-align: right\"> - Ray Dalio</h3>\n                        </div>\n                    </div>\n                </div>\n            </section>\n            <section id=\"branch\" role=\"region\">\n                <div class=\"container\">\n                    <div class=\"row\">\n                        <div class=\"col rounded-top shadow-lg p-3 bg-white\">\n                            <p style=\"font-family: Trebuchet MS; margin-bottom: 0px;\">Talents hiring in:</p>\n                            <div class=\"row py-0\">\n                                <div id=\"upper\">\n                                    <div id=\"DS\"class=\"col-md-10 text-center feature-block\" style=\"padding-top: 30px;\">\n                                        <img src=\"https://img.icons8.com/cotton/64/000000/artificial-intelligence.png\"/>\n                                        <h4 class=\"mt-1\" style=\"font-family:Comic sans MS\">Data Science</h4>\n                                    </div>\n                                    <div id=\"WD\" class=\"col-md-10 text-center feature-block\">\n                                        <img src=\"https://img.icons8.com/cotton/64/000000/laptop-coding.png\"/>\n                                        <h4 class=\"mt-1\" style=\"font-family:Comic sans MS\">Web development</h4>\n                                    </div>\n                                </div>\n                                <div id=\"lower\">\n                                    <div id=\"BC\" class=\"col-md-4 text-center feature-block\">\n                                        <img src=\"https://img.icons8.com/cotton/64/000000/bad-idea.png\"/>\n                                        <h4 class=\"mt-12\" style=\"font-family:Comic sans MS\">Blockchain</h4>\n                                    </div>\n                                    <div id=\"GD\" class=\"col-md-4 text-center feature-block\">\n                                        <i class=\"fa fa-gamepad fa-4x\" title=\"Game devops\"></i>\n                                        <h4 class=\"mt-12\" style=\"font-family:Comic sans MS\">Game development</h4>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </section>\n\n        </main>\n        <footer role=\"contentinfo\" class=\"footer\">\n            <div class=\"container footer-inner\">\n                <div class=\"row py-3\">\n                    <div class=\"col-md-4 footer-inner-content text-white\">\n                        <h4 class=\"d-inline mr-2\">Follow us</h4>\n                        <a class=\"footer-social-link\" href=\"#\"><i class=\"fab fa-facebook-f fa-2x ml-2\" title=\"Follow us on Facebook\"></i> <span class=\"sr-only\">Follow us on Facebook</span></a>\n                        <a class=\"footer-social-link\" href=\"#\"><i class=\"fab fa-twitter fa-2x ml-2\" title=\"Follow us on Twitter\"></i> <span class=\"sr-only\">Follow us on Twitter</span></a>\n                        <a class=\"footer-social-link\" href=\"#\"><i class=\"fab fa-instagram fa-2x ml-2\" title=\"Follow us on Instagram\"></i> <span class=\"sr-only\">Follow us on Instagram</span></a>\n                        <a class=\"footer-social-link\" href=\"#\"><i class=\"fab fa-github fa-2x ml-2\" title=\"Follow us on Github\"></i> <span class=\"sr-only\">Follow us on Github</span></a>\n                    </div>\n                    <div class=\"col-md-8 footer-inner-content\">\n<!--                         <p class=\"col-md-5 text-white mb-0\">Copyright &copy; 2020 by <a href=\"#\" title=\"\">Recruitio.Inc</a></p>\n -->                        <ul class=\"nav float-md-right\">\n                            <li class=\"nav-item\"><a class=\"nav-link text-white\" href=\"#\">Made with <span style=\"color: #e25555;\">&#9829;</span> for IBMHackchallenge2020</a></li>\n                        </ul>\n                    </div>\n                </div>\n                <!-- <div class=\"row pb-2\">\n                    <div class=\"col text-center text-white\">\n                        <p class=\"mb-0\">Copyright &copy; 2020 by <a href=\"#\" title=\"\">Recruitio.Inc</a></p>\n                    </div>\n                </div> -->\n            </div>\n        </footer>\n    </div>\n\n<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=\" crossorigin=\"anonymous\"></script>\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n</body>\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e390256.edd2be",
+        "type": "ui_template",
+        "z": "d07391d5.a8875",
+        "group": "80024bc1.b6a528",
+        "name": "for register",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "format": "<div>\n    <div style=\"font-family:Bradley Hand,cursive; text-align: center;padding-top:10px;font-size:15px;\"><strong>New Here?</strong>\n</div>\n<div style=\"font-family:Bradley Hand,cursive; text-align: center; font-size:15px;\"><strong> Click on the Button Below</strong>\n</div>\n<div style=\"padding-left: 90px;\">\n    <i class=\"fa fa-user\" aria-hidden=\"true\" style=\"font-size:36px\"></i>\n</div>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c142fde.91a28",
+        "type": "ui_template",
+        "z": "d07391d5.a8875",
+        "group": "80024bc1.b6a528",
+        "name": "for login",
+        "order": 5,
+        "width": 2,
+        "height": 6,
+        "format": "<div style=\"background:#d7d7db;\">\n    <h5 style=\"font-family:Bradley Hand,cursive; text-align: center;padding-top:10px\"><strong>Our Mission</strong></h5>\n    <p style=\"font-family:Trebuchet MS; font-size:16px; text-align: center\">To be the global recruitment software provider most \n    admired for its superior technology, innovative solutions and interactive bot.</p>\n    <h5 style=\"font-family:Bradley Hand,cursive; text-align: center;padding-top:10px\"><strong>Why Us?</strong></h5>\n    <p style=\"font-family:Trebuchet MS; font-size:16px; text-align: center\">Hire the right talent at the right time and at the right cost.</p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e7cb4f3.6ac8a8",
+        "type": "ui_template",
+        "z": "d9147b7f.cb98c8",
+        "group": "9fdc266c.063a78",
+        "name": "drop resumes",
+        "order": 1,
+        "width": 4,
+        "height": 7,
+        "format": "<div>\n    <h2 style=\"font-family:Trebuchet MS,cursive; text-align: center;padding-top:10px\"><strong>Drop your Resumes Here:</strong></h2>\n    \n    <ul style=\"font-size:20px; font-family:Bradley Hand,cursive;padding-top:10px\">\n        <li>Just upload your Resume and let Recruitio take care of the rest.</li>\n        <li>We never share your resumes with anyone</li>\n    </ul>\n    \n    <div>\n        <img src=\"https://www.clker.com/cliparts/Q/S/O/B/z/l/red-arrow-curve-hi.png\" style=\"margin-left:210px;\"width=\"200\" height=\"121\">\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    }
+]
