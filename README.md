@@ -6,9 +6,7 @@
 ## Meet the team
 
 Team name: **The_Alchemists** 
-
 Team members: **Sufyan Parkar, Chaitanya Dandekar, Manish Pawar**
-
 E-mail : sufyanparkar@gmail.com
 
 Category:  AI Recruiter – Shortlist a Suitable candidate for specific Job Role
