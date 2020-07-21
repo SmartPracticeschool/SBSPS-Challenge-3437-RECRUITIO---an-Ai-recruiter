@@ -21,4 +21,4 @@ Project ID: SPS_PRO_844
 
 ### **[Click for DEMO VIDEO link](https://youtu.be/2i3h2hU-V1M)**
 
-[Here]() contains the resume we used for demo.
+### [Here](https://github.com/SmartPracticeschool/SBSPS-Challenge-3437-RECRUITIO---an-Ai-recruiter/blob/master/Manish_resume5.0.pdf) contains the resume we used for demo.
