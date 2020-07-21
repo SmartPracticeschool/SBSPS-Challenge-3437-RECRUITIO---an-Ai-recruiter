@@ -9,7 +9,7 @@ A smart chatbot enabled Ai recruiter that shortlists candidates for a specific j
 
 > [`Here`](https://github.com/SmartPracticeschool/SBSPS-Challenge-3437-RECRUITIO---an-Ai-recruiter/blob/master/Manish_resume5.0.pdf) contains the resume we used for demo.
 
-> Please go through the [`Docs`]() and ZOHO Writer (submitted in smartinternz workspace) for detailed explanation. 
+> Please go through the [`Docs`](https://github.com/SmartPracticeschool/SBSPS-Challenge-3437-RECRUITIO---an-Ai-recruiter/blob/master/project%20report/SBSPS_Challenge_3437.pdf) and ZOHO Writer (submitted in smartinternz workspace) for detailed explanation. 
 
 ## Meet the team
 
