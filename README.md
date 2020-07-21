@@ -3,6 +3,8 @@
 
 ## RECRUITIO - a Smart Chatbot enabled recruiter
 
+A smart chatbot enabled Ai recruiter that shortlists candidates for a specific job role.
+
 ## Meet the team
 
 Team name *The_Alchemists* 
